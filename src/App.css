@@ -38,19 +38,24 @@
 }
 
 
-    body {
-      width: 50%;
-      margin-left: 25%;
-      background-color: #EEEEEE;
-      font-family: sans-serif;
-    }
+body {
+  width: 70%;
+  margin-left: 25%;
+  background-color: #EEEEEE;
+  font-family: sans-serif;
+}
 
-    a { 
-      display: block; 
-      margin: 1rem; 
-      text-decoration: none;
-      color: #947508;  
-    }
-    a:hover { 
-      color: #665107; 
-    }
+a { 
+  display: block; 
+  margin: 1rem; 
+  text-decoration: none;
+  color: #947508;  
+}
+a:hover { 
+  color: #665107; 
+}
+
+.BookEditor textarea {
+  width: 100%;
+  height: 500px;
+}
