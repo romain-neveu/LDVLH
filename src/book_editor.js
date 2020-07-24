@@ -2,8 +2,13 @@ import React from 'react';
 
 class BookEditor extends React.Component {
 	constructor(props) {
-		super(props);
+        super(props);
     };
+
+
+    create() {
+
+    }
 
 	find_paragraph(number) {
 		let parag = this.props.book.paragraphs[0]
@@ -80,12 +85,22 @@ class BookEditor extends React.Component {
 			}
 		};
 
-		return (
+       const create_form = 
+        <form id="create_form" display="none">
+            <label>Numéro du paragraphe</label><br/>
+            <input type="number" name="number" /><br/>
+            <label>Texte</label><br/>
+            <textarea name="text"></textarea><br/>
+        </form>
+
+    return (
 		    <div className="BookEditor">
                 <h1>Editeur de livre - Le livre dont vous êtes l'auteur</h1>
-                <ul>{paragraphs}</ul>
+                <a onClick={() => this.create()}>Ajouter un paragraphe</a>
+                {create_form}
+                <ul id="paragraphs">{paragraphs}</ul>
                 <div>{path_to_death()}</div>
-                <textarea>{JSON.stringify(this.props.book, null, 2)}</textarea>
+                <pre>{JSON.stringify(this.props.book, null, 2)}</pre>
 			</div>
 	 	);
 	}

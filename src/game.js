@@ -7,7 +7,7 @@ class Game extends React.Component {
 	constructor(props) {
 		super(props);
 		this.state = {
-			action: 'play'
+			action: 'edit'
 		};
 	};
 
